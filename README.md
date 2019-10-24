@@ -1,0 +1,1 @@
+Based on the castles and creatures problem found [here](http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html).
