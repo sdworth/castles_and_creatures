@@ -1,4 +1,7 @@
 class Game
+  def initialize(layout)
+  end
+
   def start
     say('welcome to the world!')
   end

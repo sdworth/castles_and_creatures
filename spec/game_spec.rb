@@ -1,7 +1,15 @@
 require './lib/game'
 
 RSpec.describe Game do
-  let(:game) { Game.new }
+  let(:game) { Game.new(minimal_layout) }
+  let(:minimal_layout) {
+    [
+      {
+        name: 'Fixer-Upper Castle',
+        rooms: []
+      }
+    ]
+  }
 
   context '#start' do
     it 'says a welcome to game message' do
