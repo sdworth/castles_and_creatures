@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class Game
-  def initialize(layout)
-  end
+  def initialize(layout); end
 
   def start
     say('welcome to the world!')

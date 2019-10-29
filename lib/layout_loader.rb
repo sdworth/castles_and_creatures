@@ -1,12 +1,13 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'pry-byebug'
 
 class LayoutLoader
   class << self
     def load(file)
-      loaded_file = File.open(file)
-      layout = JSON.load(loaded_file)
-      loaded_file.close
+      loaded_file = File.read(file)
+      layout = JSON.parse(loaded_file)
       deep_symbolize_keys(layout)
     end
 

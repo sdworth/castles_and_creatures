@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './lib/layout_loader'
 
 RSpec.describe LayoutLoader do
@@ -19,13 +21,13 @@ RSpec.describe LayoutLoader do
           {
             name: 'Tiny Castle',
             rooms: [{
-              name: "The Only Room",
+              name: 'The Only Room',
               monster: {
-                name: "Claustrophobia",
+                name: 'Claustrophobia',
                 win_chance: 95
               },
               treasure: {
-                type: "Self-Satisfaction",
+                type: 'Self-Satisfaction',
                 points: 10
               }
             }]

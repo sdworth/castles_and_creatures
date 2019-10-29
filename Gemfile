@@ -1,7 +1,10 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+source 'https://rubygems.org'
 
-gem "rspec"
-gem "byebug"
+git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+
+gem 'byebug'
 gem 'pry-byebug'
+gem 'rspec'
+gem 'rubocop', require: false
