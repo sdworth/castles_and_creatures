@@ -13,7 +13,25 @@ RSpec.describe LayoutLoader do
       )
     end
 
-    xit 'deep symbolizes keys' do
+    it 'deep symbolizes keys' do
+      expect(LayoutLoader.load('./spec/test_layouts/tiny_castle.json')).to eq(
+        [
+          {
+            name: 'Tiny Castle',
+            rooms: [{
+              name: "The Only Room",
+              monster: {
+                name: "Claustrophobia",
+                win_chance: 95
+              },
+              treasure: {
+                type: "Self-Satisfaction",
+                points: 10
+              }
+            }]
+          }
+        ]
+      )
     end
   end
 end

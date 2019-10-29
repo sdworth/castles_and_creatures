@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Tiny Castle",
+    "rooms": [{
+      "name": "The Only Room",
+      "monster": {
+        "name": "Claustrophobia",
+        "win_chance": 95
+      },
+      "treasure": {
+        "type": "Self-Satisfaction",
+        "points": 10
+      }
+    }]
+  }
+]
