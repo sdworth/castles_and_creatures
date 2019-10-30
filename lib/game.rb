@@ -1,10 +1,18 @@
 # frozen_string_literal: true
 
+require './lib/castle'
+
 class Game
-  def initialize(layout); end
+  def initialize(layout)
+    @castles = layout.map { |castle_data| Castle.new(castle_data) }
+  end
 
   def start
-    say('welcome to the world!')
+    say('Welcome to the world!')
+
+    say("You approach a #{@castles.first.name}!")
+
+    @castles.first.enter
   end
 
   def say(text)
