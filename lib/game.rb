@@ -1,21 +1,23 @@
 # frozen_string_literal: true
 
 require './lib/castle'
+require './lib/interactors/command_line_interactor'
 
 class Game
-  def initialize(layout)
+  def initialize(layout, interactor = CommandLineInteractor.new)
+    @interactor = interactor
     @castles = layout.map { |castle_data| Castle.new(castle_data) }
   end
 
   def start
-    say('Welcome to the world!')
+    interactor.say('Welcome to the world!')
 
-    say("You approach a #{@castles.first.name}!")
+    interactor.say("You approach a #{@castles.first.name}!")
 
     @castles.first.enter
   end
 
-  def say(text)
-    puts text
-  end
+  private
+
+  attr_reader :interactor
 end
